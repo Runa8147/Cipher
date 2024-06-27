@@ -1,3 +1,4 @@
-python
-google generative ai
-pandas
+python-dotenv
+python-pandas
+google-generativeai
+streamlit
