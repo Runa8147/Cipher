@@ -1,11 +1,16 @@
+import os
 import streamlit as st
 import pandas as pd
-import google.generativeai as genai
+from dotenv import load_dotenv
+import google.generativeai as gen_ai
 
 
-# Set up Gemini API
-genai.configure(api_key="AIzaSyDKv4gjBMYe_OszgWMz7Lcns4900oVBhP0")
-model = genai.GenerativeModel('gemini-pro')
+
+load_dotenv()
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+# Set up Google Gemini-Pro AI model
+gen_ai.configure(api_key=GOOGLE_API_KEY)
+model = gen_ai.GenerativeModel('gemini-pro')
 
 # Streamlit app
 st.title("Data Analysis AI with Gemini")
