@@ -13,6 +13,7 @@ gen_ai.configure(api_key=GOOGLE_API_KEY)
 model = gen_ai.GenerativeModel('gemini-pro')
 
 # Streamlit app
+st.title("👾Cipher")
 st.title("Data Analysis AI with Gemini")
 
 # File uploader
